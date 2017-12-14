@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="fishingGame:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/fishingGame_jar</output-path>
+    <root id="archive" name="fishingGame.jar">
+      <element id="module-output" name="fishingGame" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-setup.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-natives.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-gwt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-jglfw.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-robovm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-android.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-headless.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-jglfw-natives.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libgdx-1.6.1/gdx-backend-lwjgl-natives.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

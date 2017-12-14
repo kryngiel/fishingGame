@@ -10,7 +10,7 @@ import com.gmail.kryngielto.games.fishing.utils.Constants;
 public class MainDriver {
     public static void main(String[] args) {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "Title";
+        cfg.title = "Fishing Game";
         cfg.height = Constants.GAME_MAP_SIZE.Y;
         cfg.width = Constants.GAME_MAP_SIZE.X;
         cfg.resizable = false;
