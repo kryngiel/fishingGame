@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.NeutralVelocityModifier;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
 
 /**
@@ -13,6 +15,8 @@ public class FishActor extends MovingActor {
 
     private Color fishColor;
     private FishActor () {}
+    FishVelocityModifier velocityModifier;
+
 
     @Override
     public void draw (Batch batch, float parentAlpha) {
@@ -21,6 +25,12 @@ public class FishActor extends MovingActor {
             batch.draw(textureRegion, getX(), getY(), getOriginX(), getOriginY(),
                     getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
         }
+    }
+
+    @Override
+    public void act (float delta) {
+        velocityModifier.modify(this, delta);
+        super.act(delta);
     }
 
     @Override
@@ -39,11 +49,13 @@ public class FishActor extends MovingActor {
 
     public static class Builder {
 
+        private float scale = 1;
         private float velocityX;
         private float velocityY;
         private Color color;
         private float x;
         private float y;
+        private FishVelocityModifier velocityModifier = new NeutralVelocityModifier();
 
         public Builder() {
 
@@ -67,7 +79,15 @@ public class FishActor extends MovingActor {
             return this;
         }
 
+        public Builder velocityModifier(FishVelocityModifier fishVelocityModifier) {
+            this.velocityModifier = fishVelocityModifier;
+            return this;
+        }
 
+        public Builder scale(float scale) {
+            this.scale = scale;
+            return this;
+        }
 
         public FishActor build() {
             FishActor fish = new FishActor();
@@ -80,6 +100,8 @@ public class FishActor extends MovingActor {
             fish.fishColor = color;
             fish.setX(x);
             fish.setY(y);
+            fish.setScale(scale);
+            fish.velocityModifier = velocityModifier;
             return fish;
         }
     }

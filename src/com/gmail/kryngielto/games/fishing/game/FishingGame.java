@@ -29,7 +29,7 @@ public class FishingGame extends Game {
         lake.setTexture(new Texture(Gdx.files.internal("images/lake.png")));
         boat = new BoatActor();
         boat.setTexture(new Texture(Gdx.files.internal("images/boat.png")));
-        fishes = FishBuildDirector.buildTestFishList(50);
+        fishes = FishBuildDirector.buildTestFishList(20);
         mainStage.addActor(lake);
         mainStage.addActor(boat);
         for(FishActor fish : fishes) {

@@ -13,10 +13,6 @@ public class RandomFishParametersGenerator {
 
     private Random random = new Random();
 
-    public RandomFishParametersGenerator() {
-
-    }
-
     public FloatPair position() {
         int x = random.nextInt(Constants.GAME_MAP_SIZE.X - Constants.DEFAULT_FISH_SIZE.X);
         int y = random.nextInt(Constants.LAKE_DEPTH - Constants.DEFAULT_FISH_SIZE.Y);
@@ -37,5 +33,9 @@ public class RandomFishParametersGenerator {
              shiftedGausian = -shiftedGausian;
          }
          return new FloatPair((float)(Constants.AVERAGE_FISH_VELOCITY.X * shiftedGausian), 0);
+     }
+
+     public float scale() {
+        return random.nextFloat() * 0.5F + 0.75F;
      }
 }
