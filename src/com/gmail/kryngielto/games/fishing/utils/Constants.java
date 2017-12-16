@@ -14,6 +14,6 @@ public class Constants {
     public static final IntPair DEFAULT_FISH_SIZE = new IntPair(48, 19);
     public static final int LAKE_DEPTH = 790;
     public static final FloatPair AVERAGE_FISH_VELOCITY = new FloatPair(100, 0);
-    public static final float FISH_VELOCITY_FLIP_TIME_MEAN = 5;
-    public static final float FISH_VELOCITY_FLIP_TIME_DEVIATION = 3;
+    public static final float FISH_VELOCITY_FLIP_TIME_MEAN = 0;
+    public static final float FISH_VELOCITY_FLIP_TIME_DEVIATION = 2;
 }

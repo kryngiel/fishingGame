@@ -15,7 +15,5 @@ public class MainDriver {
         cfg.width = Constants.GAME_MAP_SIZE.X;
         cfg.resizable = false;
         new LwjglApplication(new FishingGame(), cfg);
-
-        System.out.println("Dupa");
     }
 }
