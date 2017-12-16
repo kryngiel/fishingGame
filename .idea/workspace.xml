@@ -7,22 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4c9b814-f9bc-44e3-917b-40bc78c64305" name="Default" comment="GaussRandom implementation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/ShapeDrawer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/boat.png" afterPath="$PROJECT_DIR$/images/boat.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BasicActor.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BasicActor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/MovingActor.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/MovingActor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/FishingGame.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/FishingGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/MainDriver.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/MainDriver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/Constants.class" afterPath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/Constants.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BasicActor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BoatActor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/MovingActor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/generators/RandomFishParametersGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/FishingGame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/MainDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/Constants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/FloatPair.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/IntPair.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BoatActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BoatActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/MainDriver.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/MainDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1016,7 +1014,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513434183503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Line rendering and dynamics added">
+      <created>1513444378519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513444378519</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1072,7 +1077,8 @@
     <MESSAGE value="Basic fish velocity modifiers added" />
     <MESSAGE value="implementation of fish velocity flip modified to correct gaussian distribution" />
     <MESSAGE value="unnecessary line of code removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="unnecessary line of code removed" />
+    <MESSAGE value="Line rendering and dynamics added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Line rendering and dynamics added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
