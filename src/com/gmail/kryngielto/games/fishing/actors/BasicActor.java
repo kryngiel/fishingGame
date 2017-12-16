@@ -48,7 +48,6 @@ public class BasicActor extends Actor {
     @Override
     public void act (float delta) {
         super.act(delta);
-        moveBy(velocityX * delta, velocityY * delta);
     }
 
     @Override
@@ -60,6 +59,5 @@ public class BasicActor extends Actor {
                     getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
         }
     }
-
 
 }

@@ -10,6 +10,7 @@ public class MovingActor extends BasicActor {
     @Override
     public void act (float delta) {
         super.act(delta);
+        moveBy(getVelocityX() * delta, getVelocityY() * delta);
         flipSpeedIfMapEdgeAchieved();
     }
 
