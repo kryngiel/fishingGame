@@ -1,31 +1,34 @@
 package com.gmail.kryngielto.games.fishing.actors.behaviours;
 
 import com.gmail.kryngielto.games.fishing.actors.FishActor;
-
-import java.util.Random;
+import com.gmail.kryngielto.games.fishing.utils.GaussRandom;
 
 /**
  * Created by Marcin on 14-Dec-17.
  */
 public class RandomHorizontalSpeedFlipper implements FishVelocityModifier {
 
-    private float fiftyPercentFlipPeriodInSeconds;
-    private float currentCycleTimeInSeconds = 0;
-    private Random random = new Random();
+    private float mean;
+    private float deviation;
+    private float timeToNextFlip;
+    private GaussRandom random = new GaussRandom();
 
-    public RandomHorizontalSpeedFlipper(float fiftyPercentFlipPeriodInSeconds) {
-        this.fiftyPercentFlipPeriodInSeconds = fiftyPercentFlipPeriodInSeconds;
+
+    public RandomHorizontalSpeedFlipper(float mean, float deviation) {
+        this.mean = mean;
+        this.deviation = deviation;
     }
 
     @Override
     public void modify(FishActor fish, float delta) {
-        currentCycleTimeInSeconds += delta;
-        if (random.nextFloat() < (currentCycleTimeInSeconds/(2*fiftyPercentFlipPeriodInSeconds))) {
-            fish.setVelocityX(-fish.getVelocityX());
-            currentCycleTimeInSeconds = 0;
+        timeToNextFlip -= delta;
+        while (timeToNextFlip <= 0) {
+            flip(fish);
+            timeToNextFlip = random.nextGaussian(mean, deviation);
         }
-        if (currentCycleTimeInSeconds >= fiftyPercentFlipPeriodInSeconds) {
-            currentCycleTimeInSeconds = 0;
-        }
+    }
+
+    private void flip(FishActor fish) {
+        fish.setVelocityX(-fish.getVelocityX());
     }
 }
