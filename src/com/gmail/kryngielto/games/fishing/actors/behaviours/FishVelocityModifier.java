@@ -7,4 +7,5 @@ import com.gmail.kryngielto.games.fishing.actors.FishActor;
  */
 public interface FishVelocityModifier {
     void modify(FishActor fish, float delta);
+    void resetTimer();
 }

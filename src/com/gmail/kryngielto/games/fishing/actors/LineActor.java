@@ -3,7 +3,7 @@ package com.gmail.kryngielto.games.fishing.actors;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.gmail.kryngielto.games.fishing.utils.Constants;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
 import com.gmail.kryngielto.games.fishing.utils.ShapeDrawer;
 
@@ -54,8 +54,11 @@ public class LineActor extends BasicActor {
     }
 
     private void handleDebugButtons() {
-        if (Gdx.input.isKeyPressed(Constants.RESET_HOOK_BUTTON)) {
+        if (Gdx.input.isKeyPressed(Parameters.RESET_HOOK_BUTTON)) {
             caughtSomething = false;
+            if (caughtFish != null) {
+                caughtFish.free();
+            }
             setX(boat.getLineStartingPoint().X);
             setY(boat.getLineStartingPoint().Y);
         }
@@ -75,6 +78,7 @@ public class LineActor extends BasicActor {
         for (FishActor fish : fishes) {
             if (fish.getBoundary().contains(getX(), getY())) {
                 caughtSomething = true;
+                fish.caught();
                 caughtFish = fish;
                 break; // catch one fish a time
             }
@@ -83,7 +87,7 @@ public class LineActor extends BasicActor {
 
     private void moveHook(float delta) {
         setX(boat.getLineStartingPoint().X);
-        if (Gdx.input.isKeyPressed(Constants.CONTROL_BUTTON)) {
+        if (Gdx.input.isKeyPressed(Parameters.CONTROL_BUTTON)) {
             if (getY() <= 0) {
                 setY(0);
             } else {

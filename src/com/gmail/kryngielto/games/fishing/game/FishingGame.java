@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.gmail.kryngielto.games.fishing.actors.*;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +26,9 @@ public class FishingGame extends Game {
     public void create() {
         mainStage = new Stage();
         lake = new BasicActor();
-        lake.setTexture(new Texture(Gdx.files.internal("images/lake.png")));
+        lake.setTexture(new Texture(Gdx.files.internal(Parameters.LAKE_IMAGE)));
         boat = new BoatActor();
-        boat.setTexture(new Texture(Gdx.files.internal("images/boat.png")));
+
         fishes.addAll(FishBuildDirector.buildTestFishList(20));
         lineActor = new LineActor(boat, fishes);
         mainStage.addActor(lake);

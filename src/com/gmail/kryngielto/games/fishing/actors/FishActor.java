@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.NeutralVelocityModifier;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.RandomHorizontalSpeedFlipper;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
 
 /**
@@ -16,8 +18,9 @@ public class FishActor extends MovingActor {
     private FishActor () {}
 
     private Color fishColor;
+    private boolean caught = false;
 
-    FishVelocityModifier velocityModifier;
+    private FishVelocityModifier velocityModifier;
 
     @Override
     public void draw (Batch batch, float parentAlpha) {
@@ -31,32 +34,31 @@ public class FishActor extends MovingActor {
     @Override
     public void act (float delta) {
         velocityModifier.modify(this, delta);
-        super.act(delta);
+        moveBy(getVelocityX() * delta, getVelocityY() * delta);
+        flipSpeedIfMapEdgeAchieved();
     }
 
-    @Override
-    public void setVelocityX(float velocityX) {
-        if (getVelocityX() * velocityX < 0) {
-            textureRegion.flip(true, false);
+    protected void flipSpeedIfMapEdgeAchieved() {
+        if (getX() + getWidth() >= Parameters.GAME_MAP_SIZE.X) {
+            setVelocityX(-Math.abs(getVelocityX()));
+            velocityModifier.resetTimer();
         }
-        super.setVelocityX(velocityX);
-    }
-
-    @Override
-    public void setVelocityY(float velocityY) {
-        super.setVelocityY(velocityY);
+        if (getX() <=0) {
+            setVelocityX(Math.abs(getVelocityX()));
+            velocityModifier.resetTimer();
+        }
     }
 
     public static class Builder {
 
         private float scale = 1;
+
         private float velocityX;
         private float velocityY;
         private Color color;
         private float x;
         private float y;
         private FishVelocityModifier velocityModifier = new NeutralVelocityModifier();
-
         public Builder() {
 
         }
@@ -104,6 +106,36 @@ public class FishActor extends MovingActor {
             fish.setScale(scale);
             fish.velocityModifier = velocityModifier;
             return fish;
+        }
+
+    }
+
+    @Override
+    public void setVelocityX(float velocityX) {
+        if (getVelocityX() * velocityX < 0) {
+            textureRegion.flip(true, false);
+        }
+        super.setVelocityX(velocityX);
+    }
+
+    @Override
+    public void setVelocityY(float velocityY) {
+        super.setVelocityY(velocityY);
+    }
+
+    public void caught() {
+        if (!caught) {
+            caught = true;
+            setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
+            velocityModifier = new RandomHorizontalSpeedFlipper(Parameters.CAUGHT_FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.CAUGHT_FISH_VELOCITY_FLIP_TIME_DEVIATION);
+        }
+    }
+
+    public void free() {
+        if (caught) {
+            caught = false;
+            setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
+            velocityModifier = new RandomHorizontalSpeedFlipper(Parameters.FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.FISH_VELOCITY_FLIP_TIME_DEVIATION);
         }
     }
 }

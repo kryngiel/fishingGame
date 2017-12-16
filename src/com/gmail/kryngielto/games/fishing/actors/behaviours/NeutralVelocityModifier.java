@@ -11,4 +11,9 @@ public class NeutralVelocityModifier implements FishVelocityModifier {
     public void modify(FishActor fish, float delta) {
         // Neutral modifier does nothing
     }
+
+    @Override
+    public void resetTimer() {
+        // Neutral modifier does nothing
+    }
 }

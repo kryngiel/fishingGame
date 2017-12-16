@@ -22,10 +22,16 @@ public class RandomHorizontalSpeedFlipper implements FishVelocityModifier {
     @Override
     public void modify(FishActor fish, float delta) {
         timeToNextFlip -= delta;
-        while (timeToNextFlip <= 0) {
+        if (timeToNextFlip <= 0) {
             flip(fish);
-            timeToNextFlip = random.nextGaussian(mean, deviation);
+            resetTimer();
         }
+    }
+
+    public void resetTimer() {
+        do {
+            timeToNextFlip = random.nextGaussian(mean, deviation);
+        } while (timeToNextFlip <= 0);
     }
 
     private void flip(FishActor fish) {

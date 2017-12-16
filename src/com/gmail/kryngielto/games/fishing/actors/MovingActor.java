@@ -1,7 +1,7 @@
 package com.gmail.kryngielto.games.fishing.actors;
 
 import com.badlogic.gdx.math.Rectangle;
-import com.gmail.kryngielto.games.fishing.utils.Constants;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
 /**
  * Created by Marcin on 14-Dec-17.
@@ -17,8 +17,8 @@ public class MovingActor extends BasicActor {
         flipSpeedIfMapEdgeAchieved();
     }
 
-    private void flipSpeedIfMapEdgeAchieved() {
-        if (getX() + getWidth() >= Constants.GAME_MAP_SIZE.X) {
+    protected void flipSpeedIfMapEdgeAchieved() {
+        if (getX() + getWidth() >= Parameters.GAME_MAP_SIZE.X) {
             setVelocityX(-Math.abs(getVelocityX()));
         }
         if (getX() <=0) {
