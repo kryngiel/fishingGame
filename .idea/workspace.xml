@@ -6,21 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4c9b814-f9bc-44e3-917b-40bc78c64305" name="Default" comment="GaussRandom implementation">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BasicActor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/BoatActor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishActor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/MovingActor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/actors/generators/RandomFishParametersGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/FishingGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/game/MainDriver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/FloatPair.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/fishingGame/com/gmail/kryngielto/games/fishing/utils/IntPair.class" afterPath="" />
+    <list default="true" id="f4c9b814-f9bc-44e3-917b-40bc78c64305" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +36,10 @@
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding />
+              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +47,20 @@
       <file leaf-file-name="FishActor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="99">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovingActor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,8 +71,8 @@
       <file leaf-file-name="BasicActor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="425">
+              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="e#1169#1170#0" expanded="true" />
                 <element signature="e#1201#1202#0" expanded="true" />
@@ -77,14 +84,14 @@
       <file leaf-file-name="LineActor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state relative-caret-position="-921">
+              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1845#1846#0" expanded="true" />
-                <element signature="e#1877#1878#0" expanded="true" />
-                <element signature="e#1926#1927#0" expanded="true" />
-                <element signature="e#1968#1969#0" expanded="true" />
+                <element signature="e#2967#2968#0" expanded="true" />
+                <element signature="e#2999#3000#0" expanded="true" />
+                <element signature="e#3048#3049#0" expanded="true" />
+                <element signature="e#3090#3091#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,9 +100,11 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="425">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,16 +149,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextureRegion.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -221,17 +220,17 @@
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/NeutralVelocityModifier.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/RandomFishParametersGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FishVelocityModifier.java" />
-        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/RandomHorizontalSpeedFlipper.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/GaussRandom.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/MainDriver.java" />
-        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/ShapeDrawer.java" />
-        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BoatActor.java" />
+        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" />
+        <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" />
         <option value="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" />
       </list>
     </option>
@@ -241,6 +240,76 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issuesJava</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Encapsulation issuesJava</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaBeans issuesJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Security issuesJava</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>Visibility issuesJava</id>
+          </State>
+          <State>
+            <id>toString() issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>WeakerAccess</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -748,7 +817,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunManager" selected="Application.RunGame">
@@ -1021,7 +1090,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513444378519</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="out folder content removed">
+      <created>1513444491509</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513444491509</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1046,7 +1122,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20887446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1078,7 +1154,8 @@
     <MESSAGE value="implementation of fish velocity flip modified to correct gaussian distribution" />
     <MESSAGE value="unnecessary line of code removed" />
     <MESSAGE value="Line rendering and dynamics added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Line rendering and dynamics added" />
+    <MESSAGE value="out folder content removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="out folder content removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1095,9 +1172,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1220,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1383,14 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1480,28 +1549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/graphics/Color.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1526,10 +1577,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="425">
+          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#1169#1170#0" expanded="true" />
             <element signature="e#1201#1202#0" expanded="true" />
@@ -1537,24 +1618,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="99">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        <state relative-caret-position="-921">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1877#1878#0" expanded="true" />
-            <element signature="e#1926#1927#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
+            <element signature="e#2967#2968#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
+            <element signature="e#3048#3049#0" expanded="true" />
+            <element signature="e#3090#3091#0" expanded="true" />
           </folding>
         </state>
       </provider>

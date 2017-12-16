@@ -1,5 +1,8 @@
 package com.gmail.kryngielto.games.fishing.utils;
 
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Color;
+
 /**
  * Created by Marcin on 13-Dec-17.
  */
@@ -16,4 +19,9 @@ public class Constants {
     public static final FloatPair AVERAGE_FISH_VELOCITY = new FloatPair(100, 0);
     public static final float FISH_VELOCITY_FLIP_TIME_MEAN = 1;
     public static final float FISH_VELOCITY_FLIP_TIME_DEVIATION = 2;
+    public static final Color BROWN_COLOR = new Color(0.33f, 0.13f, 0.06f, 0.75f);
+
+    // BUTTONS
+    public static final int RESET_HOOK_BUTTON = Input.Keys.R;
+    public static final int CONTROL_BUTTON = Input.Keys.SPACE;
 }

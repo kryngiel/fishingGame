@@ -13,10 +13,11 @@ import com.gmail.kryngielto.games.fishing.utils.FloatPair;
  */
 public class FishActor extends MovingActor {
 
-    private Color fishColor;
     private FishActor () {}
-    FishVelocityModifier velocityModifier;
 
+    private Color fishColor;
+
+    FishVelocityModifier velocityModifier;
 
     @Override
     public void draw (Batch batch, float parentAlpha) {
@@ -45,7 +46,6 @@ public class FishActor extends MovingActor {
     public void setVelocityY(float velocityY) {
         super.setVelocityY(velocityY);
     }
-
 
     public static class Builder {
 
@@ -91,7 +91,8 @@ public class FishActor extends MovingActor {
 
         public FishActor build() {
             FishActor fish = new FishActor();
-            fish.setTexture(new Texture((Gdx.files.internal("images/fish.png"))));
+            Texture texture = new Texture((Gdx.files.internal("images/fish.png")));
+            fish.setTexture(texture);
             fish.setVelocityX(velocityX);
             fish.setVelocityY(velocityY);
             if (fish.getVelocityX() > 0) {
