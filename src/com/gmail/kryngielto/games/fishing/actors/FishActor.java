@@ -184,4 +184,10 @@ public class FishActor extends MovingActor {
     public void setFinAcceleration(float finAcceleration) {
         this.finAcceleration = finAcceleration;
     }
+
+    public FloatPair getMouthPosition() {
+        float x = getVelocityX() < 0 ? getX() : getX() + getWidth();
+        float y = getY() + getHeight() / 2;
+        return new FloatPair(x, y);
+    }
 }

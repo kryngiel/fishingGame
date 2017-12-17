@@ -65,8 +65,9 @@ public class LineActor extends BasicActor {
     }
 
     private void caughtSomethingAct(float delta) {
-        setX(caughtFish.getX());
-        setY(caughtFish.getY());
+        FloatPair mouthPosition = caughtFish.getMouthPosition();
+        setX(mouthPosition.X);
+        setY(mouthPosition.Y);
     }
 
     private void emptyHookAct(float delta) {
