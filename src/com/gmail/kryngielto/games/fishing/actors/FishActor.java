@@ -4,11 +4,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.FishEvent;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.NeutralVelocityModifier;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.RandomHorizontalSpeedFlipper;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
 /**
  * Created by Marcin on 14-Dec-17.
@@ -41,11 +41,11 @@ public class FishActor extends MovingActor {
     protected void flipSpeedIfMapEdgeAchieved() {
         if (getX() + getWidth() >= Parameters.GAME_MAP_SIZE.X) {
             setVelocityX(-Math.abs(getVelocityX()));
-            velocityModifier.resetTimer();
+            velocityModifier.event(FishEvent.FLIP);
         }
         if (getX() <=0) {
             setVelocityX(Math.abs(getVelocityX()));
-            velocityModifier.resetTimer();
+            velocityModifier.event(FishEvent.FLIP);
         }
     }
 
@@ -127,7 +127,7 @@ public class FishActor extends MovingActor {
         if (!caught) {
             caught = true;
             setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            velocityModifier = new RandomHorizontalSpeedFlipper(Parameters.CAUGHT_FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.CAUGHT_FISH_VELOCITY_FLIP_TIME_DEVIATION);
+            velocityModifier.event(FishEvent.CAUGHT);
         }
     }
 
@@ -135,7 +135,7 @@ public class FishActor extends MovingActor {
         if (caught) {
             caught = false;
             setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            velocityModifier = new RandomHorizontalSpeedFlipper(Parameters.FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.FISH_VELOCITY_FLIP_TIME_DEVIATION);
+            velocityModifier.event(FishEvent.FREE);
         }
     }
 }

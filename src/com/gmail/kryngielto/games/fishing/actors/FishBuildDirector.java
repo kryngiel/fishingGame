@@ -1,8 +1,9 @@
 package com.gmail.kryngielto.games.fishing.actors;
 
+import com.gmail.kryngielto.games.fishing.actors.behaviours.FinSimulator;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.RandomHorizontalSpeedFlipper;
 import com.gmail.kryngielto.games.fishing.actors.generators.RandomFishParametersGenerator;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,12 @@ public class FishBuildDirector {
                 .color(generator.color())
                 .initialPosition(generator.position())
                 .velocity(generator.initialVelocity())
-                .velocityModifier(new RandomHorizontalSpeedFlipper(Parameters.FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.FISH_VELOCITY_FLIP_TIME_DEVIATION))
+                .velocityModifier(
+                        new FishVelocityModifier.ChainModifierBuilder()
+                                .add(new FinSimulator())
+                                .add(new RandomHorizontalSpeedFlipper())
+                                .build()
+                )
                 .build();
     }
 }

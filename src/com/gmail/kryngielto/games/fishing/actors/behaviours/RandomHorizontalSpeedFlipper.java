@@ -2,17 +2,20 @@ package com.gmail.kryngielto.games.fishing.actors.behaviours;
 
 import com.gmail.kryngielto.games.fishing.actors.FishActor;
 import com.gmail.kryngielto.games.fishing.utils.GaussRandom;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
 /**
  * Created by Marcin on 14-Dec-17.
  */
-public class RandomHorizontalSpeedFlipper implements FishVelocityModifier {
+public class RandomHorizontalSpeedFlipper extends FishVelocityModifier {
 
     private float mean;
     private float deviation;
     private float timeToNextFlip;
-    private GaussRandom random = new GaussRandom();
 
+    public RandomHorizontalSpeedFlipper() {
+        this(Parameters.FISH_VELOCITY_FLIP_TIME_MEAN, Parameters.FISH_VELOCITY_FLIP_TIME_DEVIATION);
+    }
 
     public RandomHorizontalSpeedFlipper(float mean, float deviation) {
         this.mean = mean;
@@ -20,7 +23,7 @@ public class RandomHorizontalSpeedFlipper implements FishVelocityModifier {
     }
 
     @Override
-    public void modify(FishActor fish, float delta) {
+    protected void doModify(FishActor fish, float delta) {
         timeToNextFlip -= delta;
         if (timeToNextFlip <= 0) {
             flip(fish);
@@ -28,10 +31,27 @@ public class RandomHorizontalSpeedFlipper implements FishVelocityModifier {
         }
     }
 
-    public void resetTimer() {
+    private void resetTimer() {
         do {
-            timeToNextFlip = random.nextGaussian(mean, deviation);
+            timeToNextFlip = GaussRandom.get().nextGaussian(mean, deviation);
         } while (timeToNextFlip <= 0);
+    }
+
+    @Override
+    protected void handleEvent(FishEvent event) {
+        switch (event) {
+            case FLIP:
+                resetTimer();
+                break;
+            case FREE:
+                mean = Parameters.FISH_VELOCITY_FLIP_TIME_MEAN;
+                deviation = Parameters.FISH_VELOCITY_FLIP_TIME_DEVIATION;
+                break;
+            case CAUGHT:
+                mean = Parameters.CAUGHT_FISH_VELOCITY_FLIP_PERIOD_MEAN;
+                deviation = Parameters.CAUGHT_FISH_VELOCITY_FLIP_PERIOD_DEVIATION;
+                break;
+        }
     }
 
     private void flip(FishActor fish) {

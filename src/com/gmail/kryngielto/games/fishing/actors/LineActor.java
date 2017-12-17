@@ -3,8 +3,8 @@ package com.gmail.kryngielto.games.fishing.actors;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
+import com.gmail.kryngielto.games.fishing.utils.Parameters;
 import com.gmail.kryngielto.games.fishing.utils.ShapeDrawer;
 
 import java.util.List;
@@ -87,7 +87,7 @@ public class LineActor extends BasicActor {
 
     private void moveHook(float delta) {
         setX(boat.getLineStartingPoint().X);
-        if (Gdx.input.isKeyPressed(Parameters.CONTROL_BUTTON)) {
+        if (Gdx.input.isKeyPressed(Parameters.CONTROL_BUTTON) || Gdx.input.isButtonPressed(0)) {
             if (getY() <= 0) {
                 setY(0);
             } else {
