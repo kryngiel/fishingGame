@@ -35,7 +35,7 @@ public class Parameters {
     // FISH DYNAMICS
     public static FloatPair AVERAGE_FISH_VELOCITY = new FloatPair(100, 0);
     public static float CAUGHT_FISH_SPEED_MODIFIER = 3f;
-    public static float FISH_VELOCITY_FLIP_TIME_MEAN = 1;
+    public static float FISH_VELOCITY_FLIP_TIME_MEAN = 6;
     public static float FISH_VELOCITY_FLIP_TIME_DEVIATION = 2;
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_DEVIATION = 0.5f;
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_MEAN = 0.3f;
