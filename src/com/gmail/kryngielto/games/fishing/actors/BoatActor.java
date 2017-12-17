@@ -38,4 +38,9 @@ public class BoatActor extends MovingActor {
             }
         }
     }
+
+    @Override
+    public boolean isVisible () {
+        return Parameters.BOAT_VISIBLE;
+    }
 }

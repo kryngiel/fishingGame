@@ -75,14 +75,14 @@ public class LineActor extends BasicActor {
     }
 
     private void checkFishCaught(float delta) {
-        for (FishActor fish : fishes) {
-            if (fish.getBoundary().contains(getX(), getY())) {
-                caughtSomething = true;
-                fish.caught();
-                caughtFish = fish;
-                break; // catch one fish a time
-            }
-        }
+//        for (FishActor fish : fishes) {
+//            if (fish.getBoundary().contains(getX(), getY())) {
+//                caughtSomething = true;
+//                fish.caught();
+//                caughtFish = fish;
+//                break; // catch one fish a time
+//            }
+//        }
     }
 
     private void moveHook(float delta) {

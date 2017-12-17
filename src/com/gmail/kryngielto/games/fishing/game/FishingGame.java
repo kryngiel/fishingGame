@@ -28,15 +28,25 @@ public class FishingGame extends Game {
         lake = new BasicActor();
         lake.setTexture(new Texture(Gdx.files.internal(Parameters.LAKE_IMAGE)));
         boat = new BoatActor();
-
-        fishes.addAll(FishBuildDirector.buildTestFishList(20));
+        fishes.addAll(FishBuildDirector.buildTestFishList(10000));
         lineActor = new LineActor(boat, fishes);
         mainStage.addActor(lake);
         mainStage.addActor(boat);
         for(FishActor fish : fishes) {
             mainStage.addActor(fish);
         }
+        someFun();
         mainStage.addActor(lineActor);
+    }
+
+    private void someFun() {
+        if (Parameters.DRAW_CONNECTIONS) {
+            List<ConnectionActor> connections = new ArrayList<>();
+            for (int i = 0; i < fishes.size() - 1; i++) {
+                mainStage.addActor(new ConnectionActor(fishes.get(i), fishes.get(i+1)));
+            }
+            mainStage.addActor(new ConnectionActor(fishes.get(fishes.size() - 1), fishes.get(0)));
+        }
     }
 
     @Override

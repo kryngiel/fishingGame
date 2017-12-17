@@ -20,9 +20,9 @@ public class RandomFishParametersGenerator {
     }
 
     public Color color() {
-        float red = random.nextFloat();
-        float green = random.nextFloat();
-        float blue = random.nextFloat();
+        float red = random.nextFloat()/4;
+        float green = random.nextFloat()/2;
+        float blue = random.nextFloat()/2;
         return new Color(red, green, blue, 1);
     }
 

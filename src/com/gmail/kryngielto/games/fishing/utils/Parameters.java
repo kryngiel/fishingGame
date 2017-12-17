@@ -10,6 +10,10 @@ public class Parameters {
 
     private Parameters() {}
 
+    public static boolean BOAT_VISIBLE = false;
+
+    public static boolean DRAW_CONNECTIONS = false;
+
     public static String GAME_WINDOW_TITLE = "Fishing Game";
 
 
