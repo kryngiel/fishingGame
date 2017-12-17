@@ -39,8 +39,9 @@ public class Parameters {
     public static float FISH_VELOCITY_FLIP_TIME_DEVIATION = 2;
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_DEVIATION = 0.5f;
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_MEAN = 0.3f;
-    public static float DEFAULT_WATER_RESISTANCE_FACTOR = 0.005f;
-    public static float DEFAULT_FISH_ACCELERATION_TIME = 0.02f;
+    public static float WATER_RESISTANCE = 1.0f;
+    public static float DEFAULT_FISH_DRAG_COEFFICIENT = 0.005f;
+    public static float DEFAULT_FIN_USAGE_TIME = 0.02f;
     public static float DEFAULT_FISH_ACCELERATION = 5000.0f;
     public static float FIN_PERIOD_MEAN = 2.3f;
     public static float FIN_PERIOD_DEVIATION = 1.1f;

@@ -19,6 +19,9 @@ public class FishActor extends MovingActor {
 
     private Color fishColor;
     private boolean caught = false;
+    private float finUsageTime;
+    private float finAcceleration;
+    private float dragCoefficient;
 
     private FishVelocityModifier velocityModifier;
 
@@ -50,14 +53,15 @@ public class FishActor extends MovingActor {
     }
 
     public static class Builder {
-
         private float scale = 1;
-
         private float velocityX;
         private float velocityY;
         private Color color;
         private float x;
         private float y;
+        private float finUsageTime = Parameters.DEFAULT_FIN_USAGE_TIME;
+        private float dragCoefficient = Parameters.DEFAULT_FISH_DRAG_COEFFICIENT;
+        private float finAcceleration = Parameters.DEFAULT_FISH_ACCELERATION;
         private FishVelocityModifier velocityModifier = new NeutralVelocityModifier();
         public Builder() {
 
@@ -91,6 +95,21 @@ public class FishActor extends MovingActor {
             return this;
         }
 
+        public Builder dragCoefficient(float dragCoefficient) {
+            this.dragCoefficient = dragCoefficient;
+            return this;
+        }
+
+        public Builder finUsageTime(float finUsageTime) {
+            this.finUsageTime = finUsageTime;
+            return this;
+        }
+
+        public Builder finAcceleration(float finAcceleration) {
+            this.finAcceleration = finAcceleration;
+            return this;
+        }
+
         public FishActor build() {
             FishActor fish = new FishActor();
             Texture texture = new Texture((Gdx.files.internal("images/fish.png")));
@@ -104,6 +123,9 @@ public class FishActor extends MovingActor {
             fish.setX(x);
             fish.setY(y);
             fish.setScale(scale);
+            fish.setFinUsageTime(finUsageTime);
+            fish.setDragCoefficient(dragCoefficient);
+            fish.setFinAcceleration(finAcceleration);
             fish.velocityModifier = velocityModifier;
             return fish;
         }
@@ -137,5 +159,29 @@ public class FishActor extends MovingActor {
             setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
             velocityModifier.event(FishEvent.FREE);
         }
+    }
+
+    public float getFinUsageTime() {
+        return finUsageTime;
+    }
+
+    public void setFinUsageTime(float finUsageTime) {
+        this.finUsageTime = finUsageTime;
+    }
+
+    public float getDragCoefficient() {
+        return dragCoefficient;
+    }
+
+    public void setDragCoefficient(float dragCoefficient) {
+        this.dragCoefficient = dragCoefficient;
+    }
+
+    public float getFinAcceleration() {
+        return finAcceleration;
+    }
+
+    public void setFinAcceleration(float finAcceleration) {
+        this.finAcceleration = finAcceleration;
     }
 }

@@ -10,26 +10,22 @@ import com.gmail.kryngielto.games.fishing.utils.Parameters;
  */
 public class FinSimulator extends FishVelocityModifier {
 
-    private float accelerationPeriod;
-    private float waterResistanceFactor;
+
+
     private float timeToNextFin;
     private float accelerationTimer;
     private boolean accelerating = false;
 
-    public FinSimulator() {
-        this(Parameters.DEFAULT_FISH_ACCELERATION_TIME, Parameters.DEFAULT_WATER_RESISTANCE_FACTOR);
-    }
 
-    public FinSimulator(float accelerationPeriod, float waterResistanceFactor) {
-        this.accelerationPeriod = accelerationPeriod;
-        this.waterResistanceFactor = waterResistanceFactor;
+    public FinSimulator() {
+
     }
 
     @Override
     protected void doModify(FishActor fish, float delta) {
         if (accelerating) {
             accelerationTimer+=delta;
-            if (accelerationTimer >= accelerationPeriod) {
+            if (accelerationTimer >= fish.getFinUsageTime()) {
                 accelerating = false;
                 initNewPeriodFinTimer();
             }
@@ -45,14 +41,19 @@ public class FinSimulator extends FishVelocityModifier {
     }
 
     private void modifyVelocity(FishActor fish, float delta) {
+        float acceleration = getAcceleration(fish);
+        float deltaVelocity = acceleration * delta;
+        fish.setVelocityX(fish.getVelocityX() + deltaVelocity);
+    }
+
+    private float getAcceleration(FishActor fish) {
         float finAcceleration = 0;
         if (accelerating) {
-            finAcceleration = fish.getVelocityX() > 0 ? Parameters.DEFAULT_FISH_ACCELERATION : -Parameters.DEFAULT_FISH_ACCELERATION;
+            finAcceleration = fish.getVelocityX() > 0 ? fish.getFinAcceleration() : -fish.getFinAcceleration();
         }
-        float resistanceAcceleration = waterResistanceFactor * fish.getVelocityX() * fish.getVelocityX();
+        float resistanceAcceleration = Parameters.WATER_RESISTANCE * fish.getDragCoefficient() * fish.getVelocityX() * fish.getVelocityX();
         resistanceAcceleration = fish.getVelocityX() > 0 ? -resistanceAcceleration : resistanceAcceleration;
-        float deltaVelocity = (finAcceleration + resistanceAcceleration) * delta;
-        fish.setVelocityX(fish.getVelocityX() + deltaVelocity);
+        return finAcceleration + resistanceAcceleration;
     }
 
     private void initNewPeriodFinTimer() {
