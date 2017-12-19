@@ -24,9 +24,7 @@ public class FishBuildDirector {
     public static FishActor buildTestFish() {
         RandomFishParametersGenerator generator = new RandomFishParametersGenerator();
         return new FishActor.Builder()
-                .color(generator.color())
-                .initialPosition(generator.position())
-                .velocity(generator.initialVelocity())
+                .generator(new RandomFishParametersGenerator())
                 .velocityModifier(
                         new FishVelocityModifier.ChainModifierBuilder()
                                 .add(new FinSimulator())

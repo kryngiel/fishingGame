@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.FishEvent;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.NeutralVelocityModifier;
+import com.gmail.kryngielto.games.fishing.actors.generators.FishParametersGenerator;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
 import com.gmail.kryngielto.games.fishing.utils.Parameters;
 
@@ -22,6 +23,8 @@ public class FishActor extends MovingActor {
     private float finUsageTime;
     private float finAcceleration;
     private float dragCoefficient;
+    private float finFrequency;
+    private float finFrequencyDeviation;
 
     private FishVelocityModifier velocityModifier;
 
@@ -59,9 +62,11 @@ public class FishActor extends MovingActor {
         private Color color;
         private float x;
         private float y;
-        private float finUsageTime = Parameters.DEFAULT_FIN_USAGE_TIME;
-        private float dragCoefficient = Parameters.DEFAULT_FISH_DRAG_COEFFICIENT;
-        private float finAcceleration = Parameters.DEFAULT_FISH_ACCELERATION;
+        private float finUsageTime = Parameters.FIN_USAGE_TIME_MEAN;
+        private float dragCoefficient = Parameters.FISH_DRAG_COEFFICIENT_MEAN;
+        private float finAcceleration = Parameters.DEFAULT_FISH_ACCELERATION_MEAN;
+        private float finFrequency;
+        private float finFrequencyDeviation;
         private FishVelocityModifier velocityModifier = new NeutralVelocityModifier();
         public Builder() {
 
@@ -110,6 +115,28 @@ public class FishActor extends MovingActor {
             return this;
         }
 
+        public Builder generator(FishParametersGenerator generator) {
+            initialPosition(generator.position());
+            color(generator.color());
+            velocity(generator.initialVelocity());
+            finAcceleration(generator.acceleration());
+            dragCoefficient(generator.dragCoefficient());
+            finUsageTime(generator.finUsageTime());
+            finFrequency(generator.finFrequency());
+            finFrequencyDeviation(generator.finFrequencyDeviation());
+            return this;
+        }
+
+        public Builder finFrequency(float finFrequency) {
+            this.finFrequency = finFrequency;
+            return this;
+        }
+
+        public Builder finFrequencyDeviation(float finFrequencyDeviation) {
+            this.finFrequencyDeviation = finFrequencyDeviation;
+            return this;
+        }
+
         public FishActor build() {
             FishActor fish = new FishActor();
             Texture texture = new Texture((Gdx.files.internal("images/fish.png")));
@@ -126,6 +153,8 @@ public class FishActor extends MovingActor {
             fish.setFinUsageTime(finUsageTime);
             fish.setDragCoefficient(dragCoefficient);
             fish.setFinAcceleration(finAcceleration);
+            fish.setFinFrequency(finFrequency);
+            fish.setFinFrequencyDeviation(finFrequencyDeviation);
             fish.velocityModifier = velocityModifier;
             return fish;
         }
@@ -189,5 +218,21 @@ public class FishActor extends MovingActor {
         float x = getVelocityX() < 0 ? getX() : getX() + getWidth();
         float y = getY() + getHeight() / 2;
         return new FloatPair(x, y);
+    }
+
+    public float getFinFrequency() {
+        return finFrequency;
+    }
+
+    public void setFinFrequency(float finFrequency) {
+        this.finFrequency = finFrequency;
+    }
+
+    public float getFinFrequencyDeviation() {
+        return finFrequencyDeviation;
+    }
+
+    public void setFinFrequencyDeviation(float finFrequencyDeviation) {
+        this.finFrequencyDeviation = finFrequencyDeviation;
     }
 }

@@ -8,6 +8,9 @@ import com.badlogic.gdx.graphics.Color;
  */
 public class Parameters {
 
+
+
+
     private Parameters() {}
 
     public static String GAME_WINDOW_TITLE = "Fishing Game";
@@ -40,9 +43,17 @@ public class Parameters {
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_DEVIATION = 0.5f;
     public static float CAUGHT_FISH_VELOCITY_FLIP_PERIOD_MEAN = 0.3f;
     public static float WATER_RESISTANCE = 1.0f;
-    public static float DEFAULT_FISH_DRAG_COEFFICIENT = 0.005f;
-    public static float DEFAULT_FIN_USAGE_TIME = 0.02f;
-    public static float DEFAULT_FISH_ACCELERATION = 5000.0f;
-    public static float FIN_PERIOD_MEAN = 2.3f;
-    public static float FIN_PERIOD_DEVIATION = 1.1f;
+    public static float FISH_DRAG_COEFFICIENT_MEAN = 0.005f;
+    public static float FISH_DRAG_COEFFICIENT_DEVIATION = 0.002f;
+
+    public static float FIN_USAGE_TIME_MEAN = 0.02f;
+    public static float FIN_USAGE__TIME_DEVIATION = 0.005f;
+    public static float DEFAULT_FISH_ACCELERATION_MEAN = 6000.0f;
+    public static float DEFAULT_FISH_ACCELERATION_DEVIATION = 1000.0f;
+
+    public static float FIN_FREQUENCY_MEAN = 0.5f;
+    public static float FIN_FREQUENCY_DEVIATION = 0.3f;
+
+    public static float FIN_FREQUENCY_DEVIATION_MEAN = 0.1f;
+    public static float FIN_FREQUENCY_DEVIATION_DEVIATION = 0.1f;
 }

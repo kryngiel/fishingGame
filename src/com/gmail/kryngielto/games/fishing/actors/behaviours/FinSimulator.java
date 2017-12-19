@@ -27,7 +27,7 @@ public class FinSimulator extends FishVelocityModifier {
             accelerationTimer+=delta;
             if (accelerationTimer >= fish.getFinUsageTime()) {
                 accelerating = false;
-                initNewPeriodFinTimer();
+                initNewPeriodFinTimer(fish);
             }
         }
         if (!accelerating) {
@@ -56,9 +56,12 @@ public class FinSimulator extends FishVelocityModifier {
         return finAcceleration + resistanceAcceleration;
     }
 
-    private void initNewPeriodFinTimer() {
+    private void initNewPeriodFinTimer(FishActor fish) {
+        float frequency;
         do {
-            timeToNextFin = GaussRandom.get().nextGaussian(Parameters.FIN_PERIOD_MEAN, Parameters.FIN_PERIOD_DEVIATION);
-        } while (timeToNextFin <= 0);
+            frequency = GaussRandom.get().nextGaussian(fish.getFinFrequency(), fish.getFinFrequencyDeviation());
+        } while (frequency <= 0);
+        float period = 1/frequency;
+        timeToNextFin = period - fish.getFinUsageTime();
     }
 }
