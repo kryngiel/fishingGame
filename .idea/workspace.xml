@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4c9b814-f9bc-44e3-917b-40bc78c64305" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/FishParametersGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FinSimulator.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FinSimulator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/RandomFishParametersGenerator.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/RandomFishParametersGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/fishingGame$RunGame.coverage" NAME="RunGame Coverage Results" MODIFIED="1513719646245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/fishingGame$RunGame.coverage" NAME="RunGame Coverage Results" MODIFIED="1513721800247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -77,8 +71,8 @@
       <file leaf-file-name="Parameters.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -820,7 +814,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513523123453</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fish parameters generation refactored">
+      <created>1513721524527</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1513721524527</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -834,7 +835,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -853,7 +854,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38203463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38203463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -884,7 +885,8 @@
     <MESSAGE value="fin simulator and chaining behaviours added" />
     <MESSAGE value="fish color shadowed" />
     <MESSAGE value="fin simulation parameters moved to FishActor" />
-    <option name="LAST_COMMIT_MESSAGE" value="fin simulation parameters moved to FishActor" />
+    <MESSAGE value="fish parameters generation refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="fish parameters generation refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1318,8 +1320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding />
         </state>
       </provider>
