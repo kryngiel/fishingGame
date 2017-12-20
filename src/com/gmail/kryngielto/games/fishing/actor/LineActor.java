@@ -3,9 +3,6 @@ package com.gmail.kryngielto.games.fishing.actor;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.gmail.kryngielto.games.fishing.actor.BasicActor;
-import com.gmail.kryngielto.games.fishing.actor.BoatActor;
-import com.gmail.kryngielto.games.fishing.actor.FishActor;
 import com.gmail.kryngielto.games.fishing.util.FloatPair;
 import com.gmail.kryngielto.games.fishing.util.Parameters;
 import com.gmail.kryngielto.games.fishing.util.ShapeDrawer;
@@ -56,6 +53,16 @@ public class LineActor extends BasicActor {
         }
     }
 
+    private void caughtSomethingAct(float delta) {
+        setX(boat.getLineStartingPoint().X);
+        moveHookUp(delta);
+    }
+
+    private void emptyHookAct(float delta) {
+        moveHook(delta);
+        checkFishCaught(delta);
+    }
+
     private void handleDebugButtons() {
         if (Gdx.input.isKeyPressed(Parameters.RESET_HOOK_BUTTON)) {
             caughtSomething = false;
@@ -67,42 +74,55 @@ public class LineActor extends BasicActor {
         }
     }
 
-    private void caughtSomethingAct(float delta) {
-        FloatPair mouthPosition = caughtFish.getMouthPosition();
-        setX(mouthPosition.X);
-        setY(mouthPosition.Y);
-    }
-
-    private void emptyHookAct(float delta) {
-        moveHook(delta);
-        checkFishCaught(delta);
-    }
-
     private void checkFishCaught(float delta) {
         for (FishActor fish : fishes) {
             if (fish.getBoundary().contains(getX(), getY())) {
-                caughtSomething = true;
-                fish.caught(this);
-                caughtFish = fish;
+                catchFish(fish);
                 break; // catch one fish a time
             }
         }
     }
 
+    private void catchFish(FishActor fish) {
+        caughtSomething = true;
+        fish.caught(this);
+        fish.setPositionByMouth(getX(), getY());
+        caughtFish = fish;
+    }
+
     private void moveHook(float delta) {
         setX(boat.getLineStartingPoint().X);
         if (Gdx.input.isKeyPressed(Parameters.CONTROL_BUTTON) || Gdx.input.isButtonPressed(0)) {
-            if (getY() <= 0) {
-                setY(0);
-            } else {
-                setY(getY() - lineSpeedDown * delta);
+            moveHookDown(delta);
+        } else {
+            moveHookUp(delta);
+        }
+    }
+
+    private void moveHookUp(float delta) {
+        if (getY() >= boat.getLineStartingPoint().Y) {
+            setY(boat.getLineStartingPoint().Y);
+            if (caughtSomething) {
+                loadFish();
             }
         } else {
-            if (getY() >= boat.getLineStartingPoint().Y) {
-                setY(boat.getLineStartingPoint().Y);
-            } else {
-                setY(getY() + lineSpeedUp * delta);
-            }
+            setY(getY() + lineSpeedUp * delta);
+        }
+    }
+
+    private void loadFish() {
+        fishes.remove(caughtFish);
+        caughtFish.setVisible(false);
+        caughtSomething = false;
+        caughtFish = null;
+
+    }
+
+    private void moveHookDown(float delta) {
+        if (getY() <= 0) {
+            setY(0);
+        } else {
+            setY(getY() - lineSpeedDown * delta);
         }
     }
 

@@ -41,8 +41,12 @@ public class FishActor extends MovingActor {
 
     @Override
     public void act (float delta) {
-        behaviour.modify(this, delta);
-        moveBy(getVelocityX() * delta, getVelocityY() * delta);
+        if (caught) {
+            setPositionByMouth(line.getX(), line.getY());
+        } else {
+            behaviour.modify(this, delta);
+            moveBy(getVelocityX() * delta, getVelocityY() * delta);
+        }
         flipSpeedIfMapEdgeAchieved();
     }
 
@@ -55,6 +59,99 @@ public class FishActor extends MovingActor {
             setVelocityX(Math.abs(getVelocityX()));
             behaviour.event(FishEvent.FLIP);
         }
+    }
+
+    public boolean isFacingRight() {
+        return getVelocityX() > 0;
+    }
+
+    @Override
+    public void setVelocityX(float velocityX) {
+        if (getVelocityX() * velocityX < 0) {
+            textureRegion.flip(true, false);
+        }
+        super.setVelocityX(velocityX);
+    }
+
+    @Override
+    public void setVelocityY(float velocityY) {
+        super.setVelocityY(velocityY);
+    }
+
+    public void caught(LineActor line) {
+        this.line = line;
+        if (!caught) {
+            caught = true;
+            setOrigin(isFacingRight() ? getWidth() : 0, getHeight()/2);
+            setRotation(isFacingRight() ? 90 : -90);
+            setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
+            behaviour.event(FishEvent.CAUGHT);
+        }
+    }
+
+    public void free() {
+        if (caught) {
+            caught = false;
+            setRotation(0);
+            setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
+            behaviour.event(FishEvent.FREE);
+        }
+    }
+
+    public void setPositionByMouth(float x, float y) {
+        if (isFacingRight()) {
+            setX(x - getWidth());
+            setY(y - getHeight()/2);
+        } else {
+            setX(x);
+            setY(y - getHeight()/2);
+        }
+    }
+
+    public float getFinUsageTime() {
+        return finUsageTime;
+    }
+
+    public void setFinUsageTime(float finUsageTime) {
+        this.finUsageTime = finUsageTime;
+    }
+
+    public float getDragCoefficient() {
+        return dragCoefficient;
+    }
+
+    public void setDragCoefficient(float dragCoefficient) {
+        this.dragCoefficient = dragCoefficient;
+    }
+
+    public float getFinAcceleration() {
+        return finAcceleration;
+    }
+
+    public void setFinAcceleration(float finAcceleration) {
+        this.finAcceleration = finAcceleration;
+    }
+
+    public FloatPair getMouthPosition() {
+        float x = isFacingRight() ? getX() + getWidth() : getX();
+        float y = getY() + getHeight() / 2;
+        return new FloatPair(x, y);
+    }
+
+    public float getFinFrequency() {
+        return finFrequency;
+    }
+
+    public void setFinFrequency(float finFrequency) {
+        this.finFrequency = finFrequency;
+    }
+
+    public float getFinFrequencyDeviation() {
+        return finFrequencyDeviation;
+    }
+
+    public void setFinFrequencyDeviation(float finFrequencyDeviation) {
+        this.finFrequencyDeviation = finFrequencyDeviation;
     }
 
     public static class Builder {
@@ -147,7 +244,7 @@ public class FishActor extends MovingActor {
             fish.setTexture(texture);
             fish.setVelocityX(velocityX);
             fish.setVelocityY(velocityY);
-            if (fish.getVelocityX() > 0) {
+            if (fish.isFacingRight()) {
                 fish.getTextureRegion().flip(true, false);
             }
             fish.fishColor = color;
@@ -165,79 +262,5 @@ public class FishActor extends MovingActor {
 
     }
 
-    @Override
-    public void setVelocityX(float velocityX) {
-        if (getVelocityX() * velocityX < 0) {
-            textureRegion.flip(true, false);
-        }
-        super.setVelocityX(velocityX);
-    }
 
-    @Override
-    public void setVelocityY(float velocityY) {
-        super.setVelocityY(velocityY);
-    }
-
-    public void caught(LineActor line) {
-        this.line = line;
-        if (!caught) {
-            caught = true;
-            setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            behaviour.event(FishEvent.CAUGHT);
-        }
-    }
-
-    public void free() {
-        if (caught) {
-            caught = false;
-            setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            behaviour.event(FishEvent.FREE);
-        }
-    }
-
-    public float getFinUsageTime() {
-        return finUsageTime;
-    }
-
-    public void setFinUsageTime(float finUsageTime) {
-        this.finUsageTime = finUsageTime;
-    }
-
-    public float getDragCoefficient() {
-        return dragCoefficient;
-    }
-
-    public void setDragCoefficient(float dragCoefficient) {
-        this.dragCoefficient = dragCoefficient;
-    }
-
-    public float getFinAcceleration() {
-        return finAcceleration;
-    }
-
-    public void setFinAcceleration(float finAcceleration) {
-        this.finAcceleration = finAcceleration;
-    }
-
-    public FloatPair getMouthPosition() {
-        float x = getVelocityX() < 0 ? getX() : getX() + getWidth();
-        float y = getY() + getHeight() / 2;
-        return new FloatPair(x, y);
-    }
-
-    public float getFinFrequency() {
-        return finFrequency;
-    }
-
-    public void setFinFrequency(float finFrequency) {
-        this.finFrequency = finFrequency;
-    }
-
-    public float getFinFrequencyDeviation() {
-        return finFrequencyDeviation;
-    }
-
-    public void setFinFrequencyDeviation(float finFrequencyDeviation) {
-        this.finFrequencyDeviation = finFrequencyDeviation;
-    }
 }
