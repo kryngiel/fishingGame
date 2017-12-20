@@ -2,7 +2,7 @@ package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.gmail.kryngielto.games.fishing.actor.file.TextureRepository;
+import com.gmail.kryngielto.games.fishing.file.TextureRepository;
 import com.gmail.kryngielto.games.fishing.util.Parameters;
 import com.gmail.kryngielto.games.fishing.util.FloatPair;
 

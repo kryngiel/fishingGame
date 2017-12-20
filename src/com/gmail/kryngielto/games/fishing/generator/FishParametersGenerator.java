@@ -1,4 +1,4 @@
-package com.gmail.kryngielto.games.fishing.actor.generator;
+package com.gmail.kryngielto.games.fishing.generator;
 
 import com.badlogic.gdx.graphics.Color;
 import com.gmail.kryngielto.games.fishing.util.FloatPair;
