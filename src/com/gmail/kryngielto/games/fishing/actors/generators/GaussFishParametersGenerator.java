@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created by Marcin on 14-Dec-17.
  */
-public class RandomFishParametersGenerator implements FishParametersGenerator {
+public class GaussFishParametersGenerator implements FishParametersGenerator {
 
     private Random random = new Random();
 

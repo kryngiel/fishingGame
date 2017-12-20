@@ -4,9 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.Behaviour;
 import com.gmail.kryngielto.games.fishing.actors.behaviours.FishEvent;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.FishVelocityModifier;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.NeutralVelocityModifier;
+import com.gmail.kryngielto.games.fishing.actors.behaviours.Modifier;
 import com.gmail.kryngielto.games.fishing.actors.generators.FishParametersGenerator;
 import com.gmail.kryngielto.games.fishing.utils.FloatPair;
 import com.gmail.kryngielto.games.fishing.utils.Parameters;
@@ -26,7 +26,7 @@ public class FishActor extends MovingActor {
     private float finFrequency;
     private float finFrequencyDeviation;
 
-    private FishVelocityModifier velocityModifier;
+    private Behaviour behaviour;
 
     @Override
     public void draw (Batch batch, float parentAlpha) {
@@ -39,7 +39,7 @@ public class FishActor extends MovingActor {
 
     @Override
     public void act (float delta) {
-        velocityModifier.modify(this, delta);
+        behaviour.modify(this, delta);
         moveBy(getVelocityX() * delta, getVelocityY() * delta);
         flipSpeedIfMapEdgeAchieved();
     }
@@ -47,11 +47,11 @@ public class FishActor extends MovingActor {
     protected void flipSpeedIfMapEdgeAchieved() {
         if (getX() + getWidth() >= Parameters.GAME_MAP_SIZE.X) {
             setVelocityX(-Math.abs(getVelocityX()));
-            velocityModifier.event(FishEvent.FLIP);
+            behaviour.event(FishEvent.FLIP);
         }
         if (getX() <=0) {
             setVelocityX(Math.abs(getVelocityX()));
-            velocityModifier.event(FishEvent.FLIP);
+            behaviour.event(FishEvent.FLIP);
         }
     }
 
@@ -67,7 +67,7 @@ public class FishActor extends MovingActor {
         private float finAcceleration = Parameters.DEFAULT_FISH_ACCELERATION_MEAN;
         private float finFrequency;
         private float finFrequencyDeviation;
-        private FishVelocityModifier velocityModifier = new NeutralVelocityModifier();
+        private Behaviour behaviour = new Behaviour();
         public Builder() {
 
         }
@@ -90,8 +90,10 @@ public class FishActor extends MovingActor {
             return this;
         }
 
-        public Builder velocityModifier(FishVelocityModifier fishVelocityModifier) {
-            this.velocityModifier = fishVelocityModifier;
+        public Builder modifiers(Modifier... modifiers) {
+            for (Modifier modifier : modifiers) {
+                behaviour.addModifier(modifier);
+            }
             return this;
         }
 
@@ -155,7 +157,7 @@ public class FishActor extends MovingActor {
             fish.setFinAcceleration(finAcceleration);
             fish.setFinFrequency(finFrequency);
             fish.setFinFrequencyDeviation(finFrequencyDeviation);
-            fish.velocityModifier = velocityModifier;
+            fish.behaviour = behaviour;
             return fish;
         }
 
@@ -178,7 +180,7 @@ public class FishActor extends MovingActor {
         if (!caught) {
             caught = true;
             setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            velocityModifier.event(FishEvent.CAUGHT);
+            behaviour.event(FishEvent.CAUGHT);
         }
     }
 
@@ -186,7 +188,7 @@ public class FishActor extends MovingActor {
         if (caught) {
             caught = false;
             setVelocityX(getVelocityX() / Parameters.CAUGHT_FISH_SPEED_MODIFIER);
-            velocityModifier.event(FishEvent.FREE);
+            behaviour.event(FishEvent.FREE);
         }
     }
 

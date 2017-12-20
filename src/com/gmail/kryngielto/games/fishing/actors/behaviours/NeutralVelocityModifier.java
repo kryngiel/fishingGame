@@ -5,10 +5,10 @@ import com.gmail.kryngielto.games.fishing.actors.FishActor;
 /**
  * Created by Marcin on 14-Dec-17.
  */
-public class NeutralVelocityModifier extends FishVelocityModifier {
+public class NeutralVelocityModifier implements Modifier {
 
     @Override
-    protected void doModify(FishActor fish, float delta) {
+    public void modify(FishActor fish, float delta) {
         // Neutral modifier does nothing
     }
 }

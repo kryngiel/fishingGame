@@ -7,7 +7,7 @@ import com.gmail.kryngielto.games.fishing.utils.Parameters;
 /**
  * Created by Marcin on 14-Dec-17.
  */
-public class RandomHorizontalSpeedFlipper extends FishVelocityModifier {
+public class RandomHorizontalSpeedFlipper implements Modifier {
 
     private float mean;
     private float deviation;
@@ -23,7 +23,7 @@ public class RandomHorizontalSpeedFlipper extends FishVelocityModifier {
     }
 
     @Override
-    protected void doModify(FishActor fish, float delta) {
+    public void modify(FishActor fish, float delta) {
         timeToNextFlip -= delta;
         if (timeToNextFlip <= 0) {
             flip(fish);
@@ -37,8 +37,7 @@ public class RandomHorizontalSpeedFlipper extends FishVelocityModifier {
         } while (timeToNextFlip <= 0);
     }
 
-    @Override
-    protected void handleEvent(FishEvent event) {
+    public void event(FishEvent event) {
         switch (event) {
             case FLIP:
                 resetTimer();

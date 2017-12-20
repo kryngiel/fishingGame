@@ -8,7 +8,7 @@ import com.gmail.kryngielto.games.fishing.utils.Parameters;
 /**
  * Created by Marcin on 17-Dec-17.
  */
-public class FinSimulator extends FishVelocityModifier {
+public class FinSimulator implements Modifier {
 
     private float timeToNextFin;
     private float accelerationTimer;
@@ -19,7 +19,7 @@ public class FinSimulator extends FishVelocityModifier {
     }
 
     @Override
-    protected void doModify(FishActor fish, float delta) {
+    public void modify(FishActor fish, float delta) {
         updateSimulator(fish, delta);
         modifyVelocity(fish, delta);
     }
