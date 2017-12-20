@@ -2,6 +2,7 @@ package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.gmail.kryngielto.games.fishing.actor.file.TextureRepository;
 import com.gmail.kryngielto.games.fishing.util.Parameters;
 import com.gmail.kryngielto.games.fishing.util.FloatPair;
 
@@ -32,9 +33,9 @@ public class BoatActor extends MovingActor {
         if (Gdx.input.isKeyJustPressed(Parameters.TROLL_MODE_SWITCH_BUTTON)) {
             Parameters.TROLL_MODE = !Parameters.TROLL_MODE;
             if (Parameters.TROLL_MODE) {
-                setTexture(new Texture(Gdx.files.internal(Parameters.TROLL_BOAT_IMAGE)));
+                setTexture(TextureRepository.getTexture(Parameters.TROLL_BOAT_IMAGE));
             } else {
-                setTexture(new Texture(Gdx.files.internal(Parameters.BOAT_IMAGE)));
+                setTexture(TextureRepository.getTexture(Parameters.BOAT_IMAGE));
             }
         }
     }

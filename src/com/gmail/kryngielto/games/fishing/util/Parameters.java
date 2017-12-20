@@ -23,13 +23,15 @@ public class Parameters {
     public static int LAKE_DEPTH = 790;
     public static Color BROWN_COLOR = new Color(0.33f, 0.13f, 0.06f, 0.75f);
 
+
     // BUTTONS
     public static int RESET_HOOK_BUTTON = Input.Keys.R;
     public static int CONTROL_BUTTON = Input.Keys.SPACE;
-    public static int TROLL_MODE_SWITCH_BUTTON = Input.Keys.T;
+    public static String LAKE_IMAGE = "images/lake.png";
 
     // IMAGES
-    public static String LAKE_IMAGE = "images/lake.png";
+    public static int TROLL_MODE_SWITCH_BUTTON = Input.Keys.T;
+    public static String FISH_IMAGE_NAME = "images/fish.png";
     public static String BOAT_IMAGE = "images/boat.png";
     public static String TROLL_BOAT_IMAGE = "images/troll_boat.png";
 

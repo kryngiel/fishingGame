@@ -1,12 +1,12 @@
 package com.gmail.kryngielto.games.fishing.actor;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.gmail.kryngielto.games.fishing.actor.behaviour.Behaviour;
 import com.gmail.kryngielto.games.fishing.actor.behaviour.FishEvent;
 import com.gmail.kryngielto.games.fishing.actor.behaviour.Modifier;
+import com.gmail.kryngielto.games.fishing.actor.file.TextureRepository;
 import com.gmail.kryngielto.games.fishing.actor.generator.FishParametersGenerator;
 import com.gmail.kryngielto.games.fishing.util.FloatPair;
 import com.gmail.kryngielto.games.fishing.util.Parameters;
@@ -143,7 +143,7 @@ public class FishActor extends MovingActor {
 
         public FishActor build() {
             FishActor fish = new FishActor();
-            Texture texture = new Texture((Gdx.files.internal("images/fish.png")));
+            Texture texture = TextureRepository.getTexture(Parameters.FISH_IMAGE_NAME);
             fish.setTexture(texture);
             fish.setVelocityX(velocityX);
             fish.setVelocityY(velocityY);
