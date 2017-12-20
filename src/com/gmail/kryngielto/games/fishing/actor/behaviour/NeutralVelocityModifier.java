@@ -1,6 +1,6 @@
-package com.gmail.kryngielto.games.fishing.actors.behaviours;
+package com.gmail.kryngielto.games.fishing.actor.behaviour;
 
-import com.gmail.kryngielto.games.fishing.actors.FishActor;
+import com.gmail.kryngielto.games.fishing.actor.FishActor;
 
 /**
  * Created by Marcin on 14-Dec-17.

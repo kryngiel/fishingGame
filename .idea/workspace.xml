@@ -7,9 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4c9b814-f9bc-44e3-917b-40bc78c64305" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/BasicActor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BoatActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/BoatActor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/FishActor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/FishBuildDirector.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/LineActor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/MovingActor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/Behaviour.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/Behaviour.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FinSimulator.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/FinSimulator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FishEvent.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/FishEvent.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/Modifier.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/Modifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/NeutralVelocityModifier.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/NeutralVelocityModifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/RandomHorizontalSpeedFlipper.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/RandomHorizontalSpeedFlipper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/FishParametersGenerator.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/generator/FishParametersGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/GaussFishParametersGenerator.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/generator/GaussFishParametersGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/FloatPair.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/FloatPair.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/GaussRandom.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/GaussRandom.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/IntPair.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/IntPair.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/Parameters.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/ShapeDrawer.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/ShapeDrawer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/FishingGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/MainDriver.java" afterPath="$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/game/MainDriver.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +51,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FishActor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/FishActor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
               <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
@@ -54,18 +73,18 @@
       <file leaf-file-name="Texture.java" pinned="false" current-in-tab="true">
         <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/graphics/Texture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LineActor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/LineActor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -92,7 +111,6 @@
       <find>next</find>
       <find>gauss</find>
       <find>distribution</find>
-      <find>flip</find>
       <find>TextureRegion</find>
       <find>scale</find>
       <find>scaleX</find>
@@ -105,6 +123,7 @@
       <find>addac</find>
       <find>setve</find>
       <find>texture</find>
+      <find>flip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -465,6 +484,10 @@
               <option name="myItemId" value="fishing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -506,7 +529,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
+              <option name="myItemId" value="actor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,11 +551,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
+              <option name="myItemId" value="actor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
+              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -554,11 +577,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
+              <option name="myItemId" value="actor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="behaviours" />
+              <option name="myItemId" value="behaviour" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -919,7 +942,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513731438474</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="small refactor">
+      <created>1513734620206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1513734620206</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -933,7 +963,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -956,7 +986,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15692641" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28518122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28518122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22294372" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1018,13 +1048,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/package-info.java" />
     <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-backend-lwjgl-sources.jar!/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1041,14 +1064,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/FloatPair.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/FloatPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/IntPair.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/IntPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
@@ -1135,7 +1158,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/ShapeDrawer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/ShapeDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
@@ -1150,7 +1173,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BoatActor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/BoatActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
@@ -1196,7 +1219,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/BasicActor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/BasicActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
@@ -1291,7 +1314,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/GaussRandom.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/GaussRandom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
@@ -1299,7 +1322,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/utils/Parameters.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/util/Parameters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
@@ -1307,7 +1330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/Modifier.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/Modifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
@@ -1315,7 +1338,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FishEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/FishEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
@@ -1323,7 +1346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/FinSimulator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/FinSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-571">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
@@ -1331,19 +1354,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/Behaviour.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/Behaviour.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/Modifier.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/Modifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -1351,7 +1374,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/RandomHorizontalSpeedFlipper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/RandomHorizontalSpeedFlipper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
@@ -1359,7 +1382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/FishParametersGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/generator/FishParametersGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
@@ -1369,7 +1392,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/behaviours/NeutralVelocityModifier.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/behaviour/NeutralVelocityModifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
@@ -1377,7 +1400,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/generators/GaussFishParametersGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/generator/GaussFishParametersGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
@@ -1385,7 +1408,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishBuildDirector.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/FishBuildDirector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
@@ -1401,7 +1424,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/MovingActor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/MovingActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
@@ -1409,15 +1432,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/LineActor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/LineActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/FishActor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actor/FishActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
@@ -1433,10 +1456,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmail/kryngielto/games/fishing/actors/files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/../libgdx-1.6.1/sources/gdx-sources.jar!/com/badlogic/gdx/graphics/Texture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        <state relative-caret-position="238">
+          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding />
         </state>
       </provider>

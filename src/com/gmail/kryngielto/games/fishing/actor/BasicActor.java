@@ -1,4 +1,4 @@
-package com.gmail.kryngielto.games.fishing.actors;
+package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;

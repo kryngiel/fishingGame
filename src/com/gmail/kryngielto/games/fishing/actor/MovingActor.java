@@ -1,7 +1,7 @@
-package com.gmail.kryngielto.games.fishing.actors;
+package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.math.Rectangle;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
+import com.gmail.kryngielto.games.fishing.util.Parameters;
 
 /**
  * Created by Marcin on 14-Dec-17.

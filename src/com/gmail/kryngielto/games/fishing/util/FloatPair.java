@@ -1,4 +1,4 @@
-package com.gmail.kryngielto.games.fishing.utils;
+package com.gmail.kryngielto.games.fishing.util;
 
 /**
  * Created by Marcin on 14-Dec-17.

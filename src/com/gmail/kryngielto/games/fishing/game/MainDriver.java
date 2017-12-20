@@ -2,7 +2,7 @@ package com.gmail.kryngielto.games.fishing.game;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
+import com.gmail.kryngielto.games.fishing.util.Parameters;
 
 /**
  * Created by Marcin on 13-Dec-17.

@@ -1,7 +1,7 @@
-package com.gmail.kryngielto.games.fishing.actors.generators;
+package com.gmail.kryngielto.games.fishing.actor.generator;
 
 import com.badlogic.gdx.graphics.Color;
-import com.gmail.kryngielto.games.fishing.utils.FloatPair;
+import com.gmail.kryngielto.games.fishing.util.FloatPair;
 
 /**
  * Created by Marcin on 19-Dec-17.

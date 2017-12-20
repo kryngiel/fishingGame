@@ -1,8 +1,8 @@
-package com.gmail.kryngielto.games.fishing.actors.behaviours;
+package com.gmail.kryngielto.games.fishing.actor.behaviour;
 
-import com.gmail.kryngielto.games.fishing.actors.FishActor;
-import com.gmail.kryngielto.games.fishing.utils.GaussRandom;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
+import com.gmail.kryngielto.games.fishing.actor.FishActor;
+import com.gmail.kryngielto.games.fishing.util.GaussRandom;
+import com.gmail.kryngielto.games.fishing.util.Parameters;
 
 
 /**

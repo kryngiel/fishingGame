@@ -1,8 +1,8 @@
-package com.gmail.kryngielto.games.fishing.actors;
+package com.gmail.kryngielto.games.fishing.actor;
 
-import com.gmail.kryngielto.games.fishing.actors.behaviours.FinSimulator;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.RandomHorizontalSpeedFlipper;
-import com.gmail.kryngielto.games.fishing.actors.generators.GaussFishParametersGenerator;
+import com.gmail.kryngielto.games.fishing.actor.behaviour.FinSimulator;
+import com.gmail.kryngielto.games.fishing.actor.behaviour.RandomHorizontalSpeedFlipper;
+import com.gmail.kryngielto.games.fishing.actor.generator.GaussFishParametersGenerator;
 
 import java.util.ArrayList;
 import java.util.List;

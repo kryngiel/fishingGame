@@ -1,9 +1,9 @@
-package com.gmail.kryngielto.games.fishing.actors;
+package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
-import com.gmail.kryngielto.games.fishing.utils.FloatPair;
+import com.gmail.kryngielto.games.fishing.util.Parameters;
+import com.gmail.kryngielto.games.fishing.util.FloatPair;
 
 /**
  * Created by Marcin on 13-Dec-17.

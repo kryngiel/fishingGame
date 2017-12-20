@@ -1,4 +1,4 @@
-package com.gmail.kryngielto.games.fishing.actors.behaviours;
+package com.gmail.kryngielto.games.fishing.actor.behaviour;
 
 /**
  * Created by Marcin on 17-Dec-17.

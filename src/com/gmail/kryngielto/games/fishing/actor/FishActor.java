@@ -1,15 +1,15 @@
-package com.gmail.kryngielto.games.fishing.actors;
+package com.gmail.kryngielto.games.fishing.actor;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.Behaviour;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.FishEvent;
-import com.gmail.kryngielto.games.fishing.actors.behaviours.Modifier;
-import com.gmail.kryngielto.games.fishing.actors.generators.FishParametersGenerator;
-import com.gmail.kryngielto.games.fishing.utils.FloatPair;
-import com.gmail.kryngielto.games.fishing.utils.Parameters;
+import com.gmail.kryngielto.games.fishing.actor.behaviour.Behaviour;
+import com.gmail.kryngielto.games.fishing.actor.behaviour.FishEvent;
+import com.gmail.kryngielto.games.fishing.actor.behaviour.Modifier;
+import com.gmail.kryngielto.games.fishing.actor.generator.FishParametersGenerator;
+import com.gmail.kryngielto.games.fishing.util.FloatPair;
+import com.gmail.kryngielto.games.fishing.util.Parameters;
 
 /**
  * Created by Marcin on 14-Dec-17.
