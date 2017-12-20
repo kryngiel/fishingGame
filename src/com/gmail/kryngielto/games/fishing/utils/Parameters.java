@@ -9,8 +9,6 @@ import com.badlogic.gdx.graphics.Color;
 public class Parameters {
 
 
-
-
     private Parameters() {}
 
     public static String GAME_WINDOW_TITLE = "Fishing Game";

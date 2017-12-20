@@ -10,12 +10,9 @@ import com.gmail.kryngielto.games.fishing.utils.Parameters;
  */
 public class FinSimulator extends FishVelocityModifier {
 
-
-
     private float timeToNextFin;
     private float accelerationTimer;
     private boolean accelerating = false;
-
 
     public FinSimulator() {
 
@@ -23,6 +20,11 @@ public class FinSimulator extends FishVelocityModifier {
 
     @Override
     protected void doModify(FishActor fish, float delta) {
+        updateSimulator(fish, delta);
+        modifyVelocity(fish, delta);
+    }
+
+    private void updateSimulator(FishActor fish, float delta) {
         if (accelerating) {
             accelerationTimer+=delta;
             if (accelerationTimer >= fish.getFinUsageTime()) {
@@ -37,7 +39,6 @@ public class FinSimulator extends FishVelocityModifier {
                 accelerationTimer = 0;
             }
         }
-        modifyVelocity(fish, delta);
     }
 
     private void modifyVelocity(FishActor fish, float delta) {
