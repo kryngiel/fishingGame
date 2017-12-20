@@ -79,7 +79,7 @@ public class LineActor extends BasicActor {
         for (FishActor fish : fishes) {
             if (fish.getBoundary().contains(getX(), getY())) {
                 caughtSomething = true;
-                fish.caught();
+                fish.caught(this);
                 caughtFish = fish;
                 break; // catch one fish a time
             }

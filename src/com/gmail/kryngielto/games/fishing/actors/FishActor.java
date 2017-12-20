@@ -18,6 +18,8 @@ public class FishActor extends MovingActor {
 
     private FishActor () {}
 
+    private LineActor line;
+
     private Color fishColor;
     private boolean caught = false;
     private float finUsageTime;
@@ -176,7 +178,8 @@ public class FishActor extends MovingActor {
         super.setVelocityY(velocityY);
     }
 
-    public void caught() {
+    public void caught(LineActor line) {
+        this.line = line;
         if (!caught) {
             caught = true;
             setVelocityX(getVelocityX() * Parameters.CAUGHT_FISH_SPEED_MODIFIER);
