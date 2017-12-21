@@ -21,6 +21,7 @@ public class LineActor extends BasicActor {
     private float lineSpeedUp = 310;
     private boolean caughtSomething = false;
     private FishActor caughtFish;
+    private int numberOfCaughtFishes = 0;
 
     public LineActor(BoatActor boat, List<FishActor> fishes) {
         this.boat = boat;
@@ -115,7 +116,7 @@ public class LineActor extends BasicActor {
         caughtFish.setVisible(false);
         caughtSomething = false;
         caughtFish = null;
-
+        numberOfCaughtFishes++;
     }
 
     private void moveHookDown(float delta) {
@@ -134,4 +135,7 @@ public class LineActor extends BasicActor {
         this.thickness = thickness;
     }
 
+    public int getNumberOfCaughtFishes() {
+        return numberOfCaughtFishes;
+    }
 }
